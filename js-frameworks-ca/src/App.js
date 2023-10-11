@@ -15,25 +15,25 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/">Home</Link> 
               </li>
               <li>
-                <Link to="/Product">Product</Link>
+                <Link to="/product">Product</Link> 
               </li>
               <li>
-                <Link to="/Cart">Cart</Link>
+                <Link to="/cart">Cart</Link> 
               </li>
               <li>
-                <Link to="/Checkout">Checkout</Link>
+                <Link to="/checkout">Checkout</Link> 
               </li>
             </ul>
           </nav>
         </header>
         <Routes>      
-            <Route path="/" exact component={Home} />
-            <Route path="/Product" component={Product} />
-            <Route path="/Cart" component={Cart} />
-            <Route path="/Checkout" component={Checkout} />
+            <Route path="/" element={<Home />} />
+            <Route path="/product" element={<Product />} /> 
+            <Route path="/cart" element={<Cart />} /> 
+            <Route path="/checkout" element={<Checkout />} /> 
         </Routes>
       </div>
     </Router>
