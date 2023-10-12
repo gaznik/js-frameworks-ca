@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+import CartIcon from './CartIcon';
+import './css/CartIcon.css';
 
 import Home from './pages/Home';
 import Product from './pages/Product';
@@ -8,6 +10,7 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 
 function App() {
+  const cartItemCount = 8;
   return (
     <Router>
       <div className="App">
@@ -27,6 +30,7 @@ function App() {
                 <Link to="/checkout">Checkout</Link> 
               </li>
             </ul>
+            <CartIcon itemCount={cartItemCount} />
           </nav>
         </header>
         <Routes>      
