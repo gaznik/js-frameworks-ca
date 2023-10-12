@@ -1,13 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import CartIcon from './CartIcon';
 import './css/CartIcon.css';
+
 
 import Home from './pages/Home';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
+import CartIcon from './CartIcon';
+import Footer from './Footer'; 
 
 function App() {
   const cartItemCount = 8;
@@ -39,6 +41,7 @@ function App() {
             <Route path="/cart" element={<Cart />} /> 
             <Route path="/checkout" element={<Checkout />} /> 
         </Routes>
+        <Footer /> 
       </div>
     </Router>
   );
