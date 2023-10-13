@@ -5,7 +5,7 @@ import './App.css';
 import Layout from './Layout';
 import Header from './Header'; 
 import Home from './pages/Home';
-import Product from './pages/Product';
+import ProductPage from './pages/ProductPage';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 
@@ -19,7 +19,7 @@ function App() {
         <div className="App">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/product" element={<Product />} />
+            <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
           </Routes>

@@ -12,7 +12,7 @@ function Header({ cartItemCount }) {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/product">Product</Link>
+            <Link to="/ProductPage">Product</Link>
           </li>
           <li>
             <Link to="/checkout">Checkout</Link>

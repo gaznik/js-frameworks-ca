@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Product from './Product';
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -7,7 +8,7 @@ function Home() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch('https://api.noroff.dev/api/v1/online-shop');
+        const response = await fetch('https://api.noroff.dev/api/v1/online-shop/');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -29,24 +30,11 @@ function Home() {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <ul>
+        <div className="product-list">
           {products.map((product) => (
-            <li key={product.id}>
-              <div>
-                <img
-                  src={product.imageUrl} 
-                  alt={product.title}
-                  style={{ maxWidth: '100px' }} 
-                />
-              </div>
-              <div>
-                <h2>{product.title}</h2>
-                <p>{product.description}</p>
-                <p>Price: {product.price} USD</p>
-              </div>
-            </li>
+            <Product key={product.id} product={product} />
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );
