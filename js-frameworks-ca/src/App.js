@@ -1,48 +1,30 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import './css/CartIcon.css';
 
-
+import Layout from './Layout';
+import Header from './Header'; 
 import Home from './pages/Home';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
-import CartIcon from './CartIcon';
-import Footer from './Footer'; 
 
 function App() {
-  const cartItemCount = 8;
+  const [cartItemCount, setCartItemCount] = useState(5); // Example counter
+
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link> 
-              </li>
-              <li>
-                <Link to="/product">Product</Link> 
-              </li>
-              <li>
-                <Link to="/cart">Cart</Link> 
-              </li>
-              <li>
-                <Link to="/checkout">Checkout</Link> 
-              </li>
-            </ul>
-            <CartIcon itemCount={cartItemCount} />
-          </nav>
-        </header>
-        <Routes>      
+      <Header cartItemCount={cartItemCount} /> 
+      <Layout>
+        <div className="App">
+          <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/product" element={<Product />} /> 
-            <Route path="/cart" element={<Cart />} /> 
-            <Route path="/checkout" element={<Checkout />} /> 
-        </Routes>
-        <Footer /> 
-      </div>
+            <Route path="/product" element={<Product />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+          </Routes>
+        </div>
+      </Layout>
     </Router>
   );
 }
