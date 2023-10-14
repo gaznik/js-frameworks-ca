@@ -1,4 +1,4 @@
-.submit-button, .view-button, .addtocart-button, .checkout-button{
+.submit-button, .addtocart-button, .checkout-button{
     background-color: #f8479C;
     color: #f3f3f3;
     padding: 10px 20px;
@@ -32,4 +32,21 @@
     border: 1px solid;
     border-color: #FF0000;
     color:#FF0000;
+}
+
+.view-button{
+  display: inline-block;
+    padding: 10px 20px;
+    background-color: #f8479C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; 
+}
+
+.view-button:hover {
+  background-color: #fff;
+  color: #f8479C;
+  border: 1px solid;
 }
