@@ -1,6 +1,8 @@
 import React from 'react';
 
 function Cart({ cartItems }) {
+  const totalSum = cartItems.reduce((sum, item) => sum + item.price, 0);
+
   return (
     <div>
       <h1>Cart Page</h1>
@@ -11,6 +13,7 @@ function Cart({ cartItems }) {
           </li>
         ))}
       </ul>
+      <p>Total: ${totalSum.toFixed(2)}</p>
     </div>
   );
 }
