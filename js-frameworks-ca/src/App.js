@@ -10,22 +10,27 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 
 function App() {
-  const [cart, setCart] = useState([]); 
+  const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
     setCart([...cart, product]);
-    alert('Product added to the cart.'); 
+    alert('Product added to the cart.');
+  };
+
+  const removeItem = (itemToRemove) => {
+    const updatedCart = cart.filter(item => item !== itemToRemove);
+    setCart(updatedCart);
   };
 
   return (
     <Router>
-      <Header cartItemCount={cart.length} /> 
+      <Header cartItemCount={cart.length} />
       <Layout>
         <div className="App">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<ProductPage onAddToCart={addToCart} />} />
-            <Route path="/cart" element={<Cart cartItems={cart} />} />
+            <Route path="/cart" element={<Cart cartItems={cart} removeItem={removeItem} />} />
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </div>
