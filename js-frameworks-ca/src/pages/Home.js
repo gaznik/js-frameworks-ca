@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Product from './Product';
 import SearchBar from '../SearchBar';
+import "../css/Home.css";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -42,7 +43,7 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className="home-container">
       <h1 className="page-title">Products</h1>
       <SearchBar onSearch={handleSearchInputChange} />
       {loading ? (
