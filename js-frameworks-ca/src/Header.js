@@ -15,9 +15,6 @@ function Header({ cartItemCount }) {
             <Link to="/ProductPage">Product</Link>
           </li>
           <li>
-            <Link to="/checkout">Checkout</Link>
-          </li>
-          <li>
             <Link to="/cart">Cart</Link>
           </li>
         </ul>

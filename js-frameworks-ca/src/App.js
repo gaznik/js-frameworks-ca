@@ -7,7 +7,7 @@ import Header from './Header';
 import Home from './pages/Home';
 import ProductPage from './pages/ProductPage';
 import Cart from './pages/Cart';
-import Checkout from './pages/Checkout';
+import CheckoutSuccess from './pages/CheckoutSuccess';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -31,7 +31,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<ProductPage onAddToCart={addToCart} />} />
             <Route path="/cart" element={<Cart cartItems={cart} removeItem={removeItem} />} />
-            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/checkoutSuccess" element={<CheckoutSuccess />} />
           </Routes>
         </div>
       </Layout>
