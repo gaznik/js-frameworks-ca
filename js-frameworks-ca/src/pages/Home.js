@@ -45,14 +45,16 @@ function Home() {
   return (
     <div className="home-container">
       <h1 className="page-title">Products</h1>
-      <SearchBar onSearch={handleSearchInputChange} />
+      <div className="search-bar-container">
+        <SearchBar onSearch={handleSearchInputChange} />
+      </div>
       {loading ? (
         <p>Loading...</p>
       ) : (
         <div className="product-list">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
-              <Product key={product.id} product={product} />
+              <Product key={product.id} product={product}/>
             ))
           ) : (
             <p>No matching products found.</p>

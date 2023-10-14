@@ -24,3 +24,24 @@
     height: auto; 
   }
   
+  
+.search-bar-container {
+  text-align: left;
+  padding: 20px; 
+}
+
+
+.search-bar {
+  width: 100px;
+}
+
+.search-bar-container input[type="text"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 2px solid #f8479C;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+}
