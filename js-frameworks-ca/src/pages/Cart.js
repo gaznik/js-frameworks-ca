@@ -13,7 +13,7 @@ function Cart({ cartItems, removeItem, clearCart }) {
 
   return (
     <div>
-      <h1>Cart Page</h1>
+      <h1 className="page-title">My Cart</h1>
       <ul>
         {cartItems.map((item, index) => (
           <li key={index}>
