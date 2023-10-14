@@ -18,12 +18,12 @@ function Cart({ cartItems, removeItem, clearCart }) {
         {cartItems.map((item, index) => (
           <li key={index}>
             {item.title} - ${item.price.toFixed(2)}
-            <button onClick={() => removeItem(item)}>Remove</button>
+            <button onClick={() => removeItem(item)} className="remove-button">Remove</button>
           </li>
         ))}
       </ul>
       <p>Total: ${cartItems.reduce((sum, item) => sum + item.price, 0).toFixed(2)}</p>
-      <button onClick={handleCheckout}>Checkout</button>
+      <button onClick={handleCheckout} className="checkout-button button-hover">Checkout</button>
     </div>
   );
 }

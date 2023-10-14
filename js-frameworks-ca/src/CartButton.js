@@ -8,7 +8,7 @@ function AddToCartButton({ product, onAddToCart }) {
   };
 
   return (
-    <button onClick={addToCart}>Add to Cart</button>
+    <button onClick={addToCart} className="addtocart-button button-hover">Add to Cart</button>
   );
 }
 

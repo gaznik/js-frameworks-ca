@@ -93,7 +93,7 @@ function Contact() {
           )}
         </div>
 
-        <button type="submit" className="submit-button">Submit</button>
+        <button type="submit" className="submit-button button-hover">Submit</button>
       </form>
     </div>
   );
