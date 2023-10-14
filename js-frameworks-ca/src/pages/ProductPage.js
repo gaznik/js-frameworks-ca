@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import AddToCartButton from '../CartButton';
 
-function ProductPage() {
+function ProductPage({ onAddToCart }) {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  
-  
-  
   useEffect(() => {
     async function fetchProductDetails() {
       try {
@@ -39,6 +37,7 @@ function ProductPage() {
           <p>{product.description}</p>
           <p>Price: ${product.price.toFixed(2)}</p>
           <p>Discounted Price: ${product.discountedPrice.toFixed(2)}</p>
+          <AddToCartButton product={product} onAddToCart={onAddToCart} />
         </div>
       ) : (
         <p>Product not found.</p>
