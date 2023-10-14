@@ -1,5 +1,5 @@
 .header {
-    background-color: #333;
+    background-color: #F8479C;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -31,5 +31,5 @@
   }
   
   nav a:hover {
-    color: #FF5733;
+    color: #333;
   }
