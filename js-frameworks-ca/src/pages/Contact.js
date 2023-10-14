@@ -1,6 +1,8 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import '../css/Contact.css';
+import '../css/buttons.css';
 
 const validationSchema = yup.object().shape({
   fullName: yup
@@ -33,8 +35,8 @@ function Contact() {
   });
 
   return (
-    <div>
-      <h2>Contact Us</h2>
+    <div className="form-container">
+      <h1 class="page-title">Contact Us</h1>
       <form onSubmit={formik.handleSubmit}>
         <div>
           <label>Full Name:</label>
@@ -91,7 +93,7 @@ function Contact() {
           )}
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-button">Submit</button>
       </form>
     </div>
   );
