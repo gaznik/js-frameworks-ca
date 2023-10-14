@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import ProductPage from './pages/ProductPage';
 import Cart from './pages/Cart';
 import CheckoutSuccess from './pages/CheckoutSuccess';
+import Contact from './pages/Contact'; 
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -36,6 +37,7 @@ function App() {
             <Route path="/product/:id" element={<ProductPage onAddToCart={addToCart} />} />
             <Route path="/cart" element={<Cart cartItems={cart} removeItem={removeItem} clearCart={clearCart} />} />
             <Route path="/checkout-success" element={<CheckoutSuccess clearCart={clearCart} />} />
+            <Route path="/contact" element={<Contact />} /> 
           </Routes>
         </div>
       </Layout>

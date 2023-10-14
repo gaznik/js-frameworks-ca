@@ -17,6 +17,9 @@ function Header({ cartItemCount }) {
           <li>
             <Link to="/cart">Cart</Link>
           </li>
+          <li>
+            <Link to="/contact">Contact</Link> 
+          </li>
         </ul>
       </nav>
       <div className="cart-icon-container">
