@@ -1,12 +1,15 @@
+// CheckoutSuccess.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Checkout() {
+function CheckoutSuccess({ clearCart }) {
   return (
     <div>
-      <h1>Checkout Page</h1>
-      <p>Checkout page hello.</p>
+      <h1>Order Successful</h1>
+      <p>Your order has been placed</p>
+      <Link to="/">Back to the shop</Link>
     </div>
   );
 }
 
-export default Checkout;
+export default CheckoutSuccess;

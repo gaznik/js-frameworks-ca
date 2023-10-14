@@ -22,6 +22,10 @@ function App() {
     setCart(updatedCart);
   };
 
+  const clearCart = () => {
+    setCart([]);
+  };
+
   return (
     <Router>
       <Header cartItemCount={cart.length} />
@@ -30,8 +34,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<ProductPage onAddToCart={addToCart} />} />
-            <Route path="/cart" element={<Cart cartItems={cart} removeItem={removeItem} />} />
-            <Route path="/checkoutSuccess" element={<CheckoutSuccess />} />
+            <Route path="/cart" element={<Cart cartItems={cart} removeItem={removeItem} clearCart={clearCart} />} />
+            <Route path="/checkout-success" element={<CheckoutSuccess clearCart={clearCart} />} />
           </Routes>
         </div>
       </Layout>
