@@ -50,3 +50,12 @@
   color: #f8479C;
   border: 1px solid;
 }
+
+@media (max-width: 600px) {
+  .submit-button, .addtocart-button, .checkout-button{
+    padding: 10px 10px;
+    font-size: 1.em;
+    font-weight: bold;
+  }
+  
+}

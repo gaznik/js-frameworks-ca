@@ -49,3 +49,18 @@
     text-align: center;
   }
   
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 10px; 
+    }
+  
+    .page-title {
+      font-size: 1.5rem; 
+    }
+
+    .form-container label {
+      font-size: 1em;
+    }
+  
+    
+  }
