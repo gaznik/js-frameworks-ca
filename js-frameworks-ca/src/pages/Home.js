@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Product from '../Product';
 import SearchBar from '../SearchBar';
-import "../css/Home.css";
+import '../css/Home.css';
 
 function Home() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchInput, setSearchInput] = useState('');
-  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [error, setError] = useState(null); 
 
   useEffect(() => {
     async function fetchProducts() {
@@ -22,6 +23,7 @@ function Home() {
         setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
+        setError('An error occurred while loading the items. Please try again later');
         setLoading(false);
       }
     }
@@ -32,7 +34,6 @@ function Home() {
   const handleSearchInputChange = (input) => {
     setSearchInput(input);
 
-    
     const filtered = input
       ? products.filter((product) =>
           product.title.toLowerCase().includes(input.toLowerCase())
@@ -48,13 +49,15 @@ function Home() {
       <div className="search-bar-container">
         <SearchBar onSearch={handleSearchInputChange} />
       </div>
-      {loading ? (
+      {error ? ( 
+        <p>Error: {error}</p>
+      ) : loading ? (
         <p>Loading...</p>
       ) : (
         <div className="product-list">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
-              <Product key={product.id} product={product}/>
+              <Product key={product.id} product={product} />
             ))
           ) : (
             <p>No matching products found.</p>

@@ -8,6 +8,7 @@ function ProductPage({ onAddToCart }) {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchProductDetails() {
@@ -21,6 +22,7 @@ function ProductPage({ onAddToCart }) {
         setLoading(false);
       } catch (error) {
         console.error('Error fetching product details:', error);
+        setError('Product not found or there was a network error.'); 
         setLoading(false);
       }
     }
@@ -29,9 +31,11 @@ function ProductPage({ onAddToCart }) {
   }, [id]);
 
   return (
-    <div className="product-container"> 
+    <div className="product-container">
       {loading ? (
         <p>Loading...</p>
+      ) : error ? ( 
+        <p>{error}</p>
       ) : product ? (
         <div>
           <h1 className="product-title">{product.title}</h1>
@@ -47,7 +51,6 @@ function ProductPage({ onAddToCart }) {
       <Link to="/">Shop more</Link>
     </div>
   );
-  
 }
 
 export default ProductPage;
