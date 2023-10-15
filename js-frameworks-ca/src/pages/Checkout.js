@@ -15,18 +15,25 @@ function Cart({ cartItems, removeItem, clearCart }) {
   return (
     <div className="cart-container">
       <h1 className="page-title">My Cart</h1>
-      <ul>
-        {cartItems.map((item, index) => (
-          <li className="cart-item" key={index}>
-            {item.title} - ${item.price.toFixed(2)}
-            <button onClick={() => removeItem(item)} className="remove-button">Remove</button>
-          </li>
-        ))}
-      </ul>
-      <p>Total: ${cartItems.reduce((sum, item) => sum + item.price, 0).toFixed(2)}</p>
-      <button onClick={handleCheckout} className="checkout-button button-hover">Checkout</button>
+      {cartItems.length === 0 ? (
+        <p>Your cart is empty.</p>
+      ) : (
+        <div>
+          <ul>
+            {cartItems.map((item, index) => (
+              <li className="cart-item" key={index}>
+                {item.title} - ${item.price.toFixed(2)}
+                <button onClick={() => removeItem(item)} className="remove-button">Remove</button>
+              </li>
+            ))}
+          </ul>
+          <p>Total: ${cartItems.reduce((sum, item) => sum + item.price, 0).toFixed(2)}</p>
+          <button onClick={handleCheckout} className="checkout-button button-hover">Checkout</button>
+        </div>
+      )}
     </div>
   );
 }
 
 export default Cart;
+
