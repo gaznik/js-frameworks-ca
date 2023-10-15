@@ -7,7 +7,7 @@ import './css/CartIcon.css';
 function CartIcon({ cartItemCount }) {
   return (
     <div className="cart-icon">
-      <Link to="/cart">
+      <Link to="/checkout">
         <FontAwesomeIcon icon={faShoppingCart} />
         {cartItemCount > 0 && <div className="item-count">{cartItemCount}</div>}
       </Link>

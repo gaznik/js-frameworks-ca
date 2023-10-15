@@ -18,7 +18,7 @@ function Header({ cartItemCount }) {
       </nav>
       <div className="cart-icon-container">
         <CartIcon cartItemCount={cartItemCount}/>
-        <Link to="/cart" className="cart-link">Cart</Link>
+        <Link to="/checkout" className="cart-link">Cart</Link>
       </div>
     </header>
   );
