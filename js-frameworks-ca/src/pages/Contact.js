@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import '../css/Contact.css';
@@ -30,14 +30,34 @@ function Contact() {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
+
+      setSuccessMessageVisible(true);
+
+      formik.resetForm();
+
       console.log('Form data submitted:', values);
     },
   });
 
+  const [successMessageVisible, setSuccessMessageVisible] = useState(false);
+
+  const hideSuccessMessage = () => {
+    setSuccessMessageVisible(false);
+  };
+
   return (
     <div className="form-container">
-      <h1 class="page-title">Contact Us</h1>
+      <h1 className="page-title">Contact Us</h1>
       <form onSubmit={formik.handleSubmit}>
+        {successMessageVisible ? (
+          <div className="success-message">
+            <p>Thank you for reaching out!</p>
+            <button type="button" onClick={hideSuccessMessage}>
+              Close
+            </button>
+          </div>
+        ) : null}
+
         <div>
           <label>Full Name:</label>
           <input
@@ -93,7 +113,9 @@ function Contact() {
           )}
         </div>
 
-        <button type="submit" className="submit-button button-hover">Submit</button>
+        <button type="submit" className="submit-button button-hover">
+          Submit
+        </button>
       </form>
     </div>
   );
