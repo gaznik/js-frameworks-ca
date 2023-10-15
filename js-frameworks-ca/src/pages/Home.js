@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Product from './Product';
+import Product from '../Product';
 import SearchBar from '../SearchBar';
 import "../css/Home.css";
 
