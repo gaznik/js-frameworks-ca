@@ -12,18 +12,13 @@ function Header({ cartItemCount }) {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/ProductPage">Product</Link>
-          </li>
-          <li>
-            <Link to="/cart">Cart</Link>
-          </li>
-          <li>
             <Link to="/contact">Contact</Link> 
           </li>
         </ul>
       </nav>
       <div className="cart-icon-container">
-        <CartIcon cartItemCount={cartItemCount} />
+        <CartIcon cartItemCount={cartItemCount}/>
+        <Link to="/cart" className="cart-link">Cart</Link>
       </div>
     </header>
   );
