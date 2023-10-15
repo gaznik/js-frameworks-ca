@@ -1,3 +1,5 @@
+Before running commands in terminal, change directory to js-frameworks-ca
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
