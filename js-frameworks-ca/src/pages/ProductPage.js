@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import AddToCartButton from '../CartButton';
+import '../css/ProductPage.css';
+import { Link } from 'react-router-dom';
 
 function ProductPage({ onAddToCart }) {
   const { id } = useParams();
@@ -27,23 +29,25 @@ function ProductPage({ onAddToCart }) {
   }, [id]);
 
   return (
-    <div>
+    <div className="product-container"> 
       {loading ? (
         <p>Loading...</p>
       ) : product ? (
         <div>
-          <h1>{product.title}</h1>
-          <img src={product.imageUrl} alt={product.title} />
-          <p>{product.description}</p>
-          <p>Price: ${product.price.toFixed(2)}</p>
+          <h1 className="product-title">{product.title}</h1>
+          <img src={product.imageUrl} alt={product.title} className="product-image" />
+          <p className="product-description">{product.description}</p>
+          <p className="product-price">Price: ${product.price.toFixed(2)}</p>
           <p>Discounted Price: ${product.discountedPrice.toFixed(2)}</p>
-          <AddToCartButton product={product} onAddToCart={onAddToCart} />
+          <AddToCartButton product={product} onAddToCart={onAddToCart} className="add-to-cart-button" />
         </div>
       ) : (
         <p>Product not found.</p>
       )}
+      <Link to="/">Shop more</Link>
     </div>
   );
+  
 }
 
 export default ProductPage;

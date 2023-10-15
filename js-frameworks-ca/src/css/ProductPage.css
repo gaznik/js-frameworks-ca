@@ -1,0 +1,38 @@
+.product-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+ 
+ .product-title {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+
+  .product-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  
+  .product-description {
+    margin-bottom: 20px;
+  }
+  
+
+  .product-price {
+    font-weight: bold;
+  }
+
+  .product-container a {
+        color: #F8479C;
+        font-weight: bold;
+        font-size: 16px;
+        transition: color 0.2s;
+    }
