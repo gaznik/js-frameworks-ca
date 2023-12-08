@@ -1,4 +1,4 @@
-# ShopWithUs | E-commerce site
+# E-commerce site with React
 
 ![Screenshot of E-commerce with React homepage](/e-commerce-with-react.png)
 
