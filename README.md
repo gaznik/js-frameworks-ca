@@ -1,6 +1,6 @@
 # E-commerce site with React
 
-![Screenshot of E-commerce with React homepage](/e-commerce-with-react.png)
+![Screenshot of E-commerce with React homepage]([/e-commerce-with-react.png](http://127.0.0.1:5500/img/e-commerce-with-react.png))
 
 This is an e-commerce website build in relation to the JavaScript Frameworks course assignment from Noroff. 
 
