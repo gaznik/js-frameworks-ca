@@ -1,6 +1,6 @@
 # E-commerce site with React
 
-![Screenshot of E-commerce with React homepage](https://leafy-torrone-c9e9ae.netlify.app/img/ShopWithUs.png)
+![Screenshot of E-commerce with React homepage](https://leafy-torrone-c9e9ae.netlify.app/img/e-commerce-with-react.png)
 
 This is an e-commerce website build in relation to the JavaScript Frameworks course assignment from Noroff. 
 
