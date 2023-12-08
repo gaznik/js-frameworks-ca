@@ -5,7 +5,7 @@
 This is an e-commerce website build in relation to the JavaScript Frameworks course assignment from Noroff. 
 
 ## Deployed site
-[Netlify website] (https://illustrious-churros-4616f0.netlify.app/)
+Netlify website: (https://illustrious-churros-4616f0.netlify.app/)
 
 ## Description
 
