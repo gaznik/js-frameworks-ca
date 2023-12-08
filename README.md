@@ -1,6 +1,6 @@
 # ShopWithUs | E-commerce site
 
-![Screenshot of E-commerce with React homepage]()
+![Screenshot of E-commerce with React homepage](/e-commerce-with-react.png)
 
 This is an e-commerce website build in relation to the JavaScript Frameworks course assignment from Noroff. 
 
