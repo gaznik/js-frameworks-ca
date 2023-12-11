@@ -21,8 +21,8 @@ Functionality/user stories:
 - Users can view items in cart and checkout
 
 ## Built With
-- [CSS]
-- [JavaScript]
+- CSS
+- JavaScript
 - React 
 
 ## Getting Started
