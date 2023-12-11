@@ -82,5 +82,5 @@ Reference any related issues if applicable.
 
 ## Contact
 
-Email: gazmendn93@gmail.com
+Email: gazmendn93@gmail.com | 
 [LinkedIn](https://www.linkedin.com/in/gazmend-nikqi-389266205/)
